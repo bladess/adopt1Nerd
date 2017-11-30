@@ -42,6 +42,11 @@ class Announce
     private $category;
 
     /**
+     * @ORM\Column(name="Date", type="date")
+     */
+    private $date;
+
+    /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="announces")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
@@ -113,6 +118,20 @@ class Announce
 
         return $this;
     }
+
+    /**
+    *Set date
+    *
+    * @return Date
+    */
+    public function setDate()
+    {
+        return $this->date = $date;
+
+        return $this;
+    }
+    
+
 
     /**
      * Get user
