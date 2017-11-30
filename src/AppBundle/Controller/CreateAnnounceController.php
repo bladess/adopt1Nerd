@@ -26,6 +26,7 @@ class CreateAnnounceController extends Controller
             ->add('title', TextType::class)
             ->add('content', TextType::class)
             ->add('category', TextType::class)
+            ->add('dueDate', DateType::class)
             ->add('save', SubmitType::class, array('label' => 'Create Announce'))
             ->getForm();
 

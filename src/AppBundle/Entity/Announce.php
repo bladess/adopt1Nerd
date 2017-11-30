@@ -120,17 +120,30 @@ class Announce
     }
 
     /**
-    *Set date
+    *Get date
     *
     * @return Date
     */
-    public function setDate()
+    public function getDate()
     {
-        return $this->date = $date;
+        return $this->date;
 
-        return $this;
+        
     }
     
+    /**
+    *
+    * @param Date $date
+    *
+    * @return Annouce
+    */
+    public function setdate()
+    {
+        $this->date =$date;
+
+        return $this;
+
+    } 
 
 
     /**
