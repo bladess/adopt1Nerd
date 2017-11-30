@@ -13,7 +13,7 @@
     <nav class="navbar navbar-default">
     <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
       </a>
     </div>
@@ -34,11 +34,18 @@
         <li><a href='/register'>Sign in</a></li>
         <li><a href='/login'>Login</a></li>
         {% endif %}
-    </ul>
-  </div>
-</nav>
-    
+        </ul>
+    </div>
+    </nav>
+        
         {% block body %}{% endblock %}
+        <footer class="container-fluid">
+        <ul class='row list-inline text-center'>
+        <li class='col-lg-4'>Michael Nassim Isabel</li>
+        <li class='col-lg-4'>Simplon Carcassonne</li>
+        <li class='col-lg-4'>Adopt1Nerd 2017</li>        
+        </ul>
+        </footer>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
