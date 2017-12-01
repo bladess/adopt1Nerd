@@ -1,9 +1,32 @@
 {% extends 'adopt/home.html.twig' %}
-{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-    <a href="{{ path('fos_user_security_logout') }}">
-        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-    </a>
-{% else %}
-    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-{% endif %}
+
+{% block body %}
+<header class="page-header">
+    <h1 class='text-center'>Votre profil</h1>
+</header>
+<div class ='container'>
+    <div class='row'>
+        <div class='col-lg-offset-3 col-lg-3'>
+            <img src='{{ usr.getAvatar() }}'class='img-responsive'/>
+                
+        </div>
+        <div class='col-lg-3'>
+        <ul class='list-unstyled'>
+                <li>{{ usr.getLastName() }}  {{ usr.getFirstName() }}</li>
+                <li>{{ usr.getPhoneNumber() }}</li>
+                
+                <li>{{ usr.getAge() }} ans</li>
+                <li>
+                {% if usr.getGender() == 'Male' %}
+                    <i class="fa fa-mars" aria-hidden="true"></i>
+                {% else %}
+                    <i class="fa fa-venus" aria-hidden="true"></i>
+                {% endif %}
+                </li>
+
+            </ul></div>
+    </div>
+    
+</div>
+
+{% endblock %}
