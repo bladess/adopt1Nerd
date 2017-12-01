@@ -17,6 +17,7 @@ Encore
 
 var config = Encore.getWebpackConfig();
 config.watchOptions = { poll: true, ignored: /node_modules/ };
+config.resolve.extensions.push('json');
 
 
 module.exports = config;
