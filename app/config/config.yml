@@ -79,9 +79,3 @@ fos_user:
     registration:
         form:
             type: AppBundle\Form\RegistrationType
-
-assetic:
-    debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
-    filters:
-        cssrewrite: ~
