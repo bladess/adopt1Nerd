@@ -13,7 +13,7 @@ Encore
     .addEntry('app', './assets/js/app.js')
     .enableSassLoader(function(sassOptions){
         // https://github.com/sass/node-sass#options,
-        options.includePaths = ["web/assets/css/global.scss"],
+        options.includePaths = ["web/assets/css/global.scss","web/build/*"],
         resolveUrlLoader = false
     })
     .autoProvidejQuery()
