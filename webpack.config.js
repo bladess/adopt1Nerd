@@ -11,9 +11,10 @@ Encore
     .setOutputPath('web/build/')
     .setPublicPath('/build')
     .addEntry('app', './assets/js/app.js')
+    .addStyleEntry('global', './assets/css/global.scss')
     .enableSassLoader(function(sassOptions){
         // https://github.com/sass/node-sass#options,
-        options.includePaths = ["web/assets/css/global.scss","web/build/*"],
+        // options.includePaths = [...],
         resolveUrlLoader = false
     })
     .autoProvidejQuery()

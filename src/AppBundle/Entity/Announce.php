@@ -42,6 +42,7 @@ class Announce
     private $category;
 
     /**
+     * @var DateTime
      * @ORM\Column(name="Date", type="date")
      */
     private $date;
