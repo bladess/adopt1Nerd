@@ -98,8 +98,8 @@ assetic:
     assets:
         bootstrap_css:
             inputs:
-                - '/web/less/styles.less'
-                - '/web/less/responsive.less'
+                - '@AppBundle/Ressources/public/less/styles.less'
+                - '@AppBundle/Ressources/public/less/responsive.less'
             filters:
                 - lessphp
                 - cssrewrite
